@@ -1,0 +1,13 @@
+{
+    "name": "Album",
+    "alias": "album",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Album\\Providers\\AlbumServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

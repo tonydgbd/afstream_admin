@@ -1,0 +1,13 @@
+{
+    "name": "AudioLanguage",
+    "alias": "audiolanguage",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\AudioLanguage\\Providers\\AudioLanguageServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

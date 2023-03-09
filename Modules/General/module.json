@@ -1,0 +1,13 @@
+{
+    "name": "General",
+    "alias": "general",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\General\\Providers\\GeneralServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

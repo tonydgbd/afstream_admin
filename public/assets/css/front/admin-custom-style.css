@@ -1,0 +1,19 @@
+.pointer{
+	cursor: pointer;
+}
+.hideMe{
+	display: none;
+}
+.swal2-popup.swal2-toast .swal2-title {
+    font-size: 16px;
+}
+.swal2-popup.swal2-toast {
+    padding: .25rem .75rem;
+    font-size: 15px;
+}
+.swal2-toast {
+	border-radius: 0.25rem;
+}
+.swal2-popup.swal2-toast {
+	font-size: 14px;
+}

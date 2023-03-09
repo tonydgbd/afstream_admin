@@ -1,0 +1,13 @@
+{
+    "name": "AdminPlaylist",
+    "alias": "adminplaylist",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\AdminPlaylist\\Providers\\AdminPlaylistServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

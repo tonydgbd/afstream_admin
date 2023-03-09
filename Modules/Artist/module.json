@@ -1,0 +1,13 @@
+{
+    "name": "Artist",
+    "alias": "artist",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Artist\\Providers\\ArtistServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

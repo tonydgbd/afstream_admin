@@ -1,0 +1,22 @@
+{
+    "Blog": true,
+    "Admin": true,
+    "Users": true,
+    "Location": true,
+    "General": true,
+    "Setting": true,
+    "Audio": true,
+    "Album": true,
+    "Artist": true,
+    "Language": true,
+    "Plan": true,
+    "Radio": true,
+    "Coupon": true,
+    "Advertisement": true,
+    "Subscription": true,
+    "TvShows": true,
+    "AudioLanguage": true,
+    "AdminPlaylists": true,
+    "AdminPlaylist": true,
+    "AudioTransaction": true
+}

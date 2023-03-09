@@ -1,0 +1,302 @@
+/* Artist Style Start */
+
+
+/* Wallet*/
+
+.payment-status-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 30px;
+}
+
+.payment-status-wrapper .current-balance {
+    width: 60%;
+    padding: 0 10px;
+}
+
+.payment-status-wrapper .incom-spent-amount {
+    width: 40%;
+    padding: 0 10px;
+}
+
+.payment-status-wrapper .additional-payment {
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px 0 0;
+}
+
+.request-payment-link {
+    color: #41d74c;
+    font-weight: 600;
+}
+
+.request-payment-link:hover,
+.request-payment-link:focus {
+    color: #41d74c;
+}
+
+.request-payment-link:hover {
+    letter-spacing: 1px;
+}
+
+.request-payment-link img {
+    vertical-align: middle;
+    margin: 0px 4px 2px 0px;
+}
+
+.incom-spent-amount>div {
+    border-radius: 10px;
+    width: 100%;
+    min-height: 75px;
+    margin: 0 0 10px;
+    padding: 10px 30px;
+}
+
+.current-balance-inner,
+.income-status {
+    background: rgb(255, 85, 62);
+    background: linear-gradient(-57deg, rgba(255, 0, 101, 1) 35%, rgba(255, 85, 62, 1) 100%);
+}
+
+.spent-status {
+    background: rgb(79, 172, 254);
+    background: linear-gradient(46deg, rgba(79, 172, 254, 1) 35%, rgba(6, 218, 229, 1) 100%);
+}
+
+.current-balance-inner {
+    background: url(./images/wallet-amount-bg.png);
+    min-height: 160px;
+    border-radius: 10px;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 0 10px;
+}
+
+.payment-status-wrapper p {
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.payment-status-wrapper h4,
+.payment-status-wrapper h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.payment-status-wrapper h3 {
+    font-size: 24px;
+}
+
+.icon-col {
+    background: #ffffff;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+}
+
+.current-balance-inner:hover,
+.incom-spent-amount>div:hover {
+    transform: scale(.98);
+}
+
+.current-balance-inner:hover .icon-col img {
+    transform: rotate(360deg);
+}
+
+.current-balance-inner:hover,
+.incom-spent-amount>div:hover,
+.current-balance-inner,
+.incom-spent-amount>div,
+.current-balance-inner:hover .icon-col img,
+.current-balance-inner .icon-col img {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.card .card-header .card-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.card-header,
+.card {
+    border-color: #d6deeb;
+}
+
+table.table-noborder,
+.table.table-noborder th,
+.table.table-noborder td {
+    border: 0;
+}
+
+.custom-table,
+.custom-table th,
+.custom-table td {
+    color: #87879f;
+    font-weight: 500;
+}
+
+.custom-table thead {
+    background: #e9eff9;
+}
+
+.custom-table thead th {
+    color: #222222;
+}
+
+.green-color {
+    color: #49c35b;
+}
+
+.primary-color {
+    color: #ff1b41;
+}
+
+.chary-color {
+    color: #ff4564;
+}
+
+.payment-history {
+    margin: 0 -20px;
+}
+
+.payment-history td,
+.payment-history th {
+    padding: 10px 20px;
+}
+
+.custom-table thead th {
+    color: #222222;
+    font-weight: 600;
+}
+
+.custom-table tr td:first-child,
+.custom-table tr th:first-child,
+.custom-table tr td:last-child,
+.custom-table tr th:last-child {
+    text-align: center;
+}
+
+.card-note b {
+    font-weight: 600;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.total-amount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.withdrawal-link {
+    font-weight: 600;
+    color: var(--primary);
+    position: relative;
+}
+
+.withdrawal-link:before {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+    height: 2px;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    opacity: .6;
+    margin: auto;
+    width: 95%;
+}
+
+.withdrawal-link:hover:before {
+    width: 80%;
+}
+
+.withdrawal-link:hover:before,
+.withdrawal-link:hover,
+.withdrawal-link,
+.withdrawal-link:before {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.withdrawal-calculation h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.amount-info {
+    margin: 0 0 20px;
+}
+
+.vertical-text-top th,
+.vertical-text-top td {
+    vertical-align: top;
+}
+
+.available-amount span {
+    color: #56cb77;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.available-amount {
+    margin: 30px 0 0;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+}
+
+.cargers-info table {
+    width: 100%;
+}
+
+.withdrawal-calculation .form-control {
+    max-width: 150px;
+}
+
+.medium-weight {
+    font-weight: 500;
+}
+
+.cargers-info td {
+    padding: 5px 0;
+}
+
+.total-amount h6 span:first-of-type {
+    margin: 0 60px 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .payment-status-wrapper .current-balance,
+    .payment-status-wrapper .incom-spent-amount {
+        width: 100%;
+    }
+    .icon-col {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+}

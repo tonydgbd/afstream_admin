@@ -1,0 +1,13 @@
+{
+    "name": "AudioTransaction",
+    "alias": "audiotransaction",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\AudioTransaction\\Providers\\AudioTransactionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
