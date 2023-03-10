@@ -154,9 +154,9 @@
                     <div class="user-info-wrapper header-links">
                         <a href="javascript:void(0);" class="user-info">
                             @if(isset(Auth::user()->image) &&  file_exists(public_path('images/user/'.Auth::user()->image)))
-                                <img src="{{ asset('public/images/user/'.Auth::user()->image) }}" alt="" class="user-img"> 
+                                <img src="{{ asset('images/user/'.Auth::user()->image) }}" alt="" class="user-img"> 
                             @else
-                                <img src="{{ asset('public/assets/images/users/profile.svg') }}" alt="" class="user-img">
+                                <img src="{{ asset('assets/images/users/profile.svg') }}" alt="" class="user-img">
                             @endif   
                             <div class="blink-animation">
                                 <span class="blink-circle"></span>

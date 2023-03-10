@@ -1,7 +1,7 @@
 @extends('layouts.front.main')
 @section('title', __('frontWords.audio_single'))
 @section('style')
-    <link href="{{asset('public/assets/css/star-rating.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/star-rating.css')}}" rel="stylesheet" type="text/css">
 @endsection
 @inject('users', 'App\User')
 @inject('reply', 'App\Reply')
@@ -17,7 +17,7 @@
             <div class="album_single_data">
                 <div class="album_single_img">
                     @if($audio[0]->image != '' && file_exists(public_path('images/audio/thumb/'.$audio[0]->image)))
-                        <img src="{{ asset('public/images/audio/thumb/'.$audio[0]->image) }}" alt="" class="img-fluid">
+                        <img src="{{ asset('images/audio/thumb/'.$audio[0]->image) }}" alt="" class="img-fluid">
                     @else
                         <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                     @endif            
@@ -30,8 +30,8 @@
                         <p>{{ $audio[0]->description }}</p>
                     </div>
                     <div class="album_btn">
-                        <a href="#" class="ms_btn play_btn play_music" data-musicid="{{ $audio[0]->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('public/assets/images/svg/play_all.svg') }}" alt="" >{{ __('frontWords.play') }}</span><span class="pause_all"><img src="{{ asset('public/assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
-                        <a href="javascript:void(0);" class="ms_btn add_to_queue" data-musicid="{{ $audio[0]->id }}" data-musictype="audio"><span class="play_all"><img src="{{ asset('public/assets/images/svg/add_q.svg') }}" alt="">{{ __('frontWords.add_to_queue') }}</span></a>
+                        <a href="#" class="ms_btn play_btn play_music" data-musicid="{{ $audio[0]->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('assets/images/svg/play_all.svg') }}" alt="" >{{ __('frontWords.play') }}</span><span class="pause_all"><img src="{{ asset('assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
+                        <a href="javascript:void(0);" class="ms_btn add_to_queue" data-musicid="{{ $audio[0]->id }}" data-musictype="audio"><span class="play_all"><img src="{{ asset('assets/images/svg/add_q.svg') }}" alt="">{{ __('frontWords.add_to_queue') }}</span></a>
                         <a href="javascript:void(0);" class="ms_btn lyric_show" data-musicid="{{ $audio[0]->id }}" data-musictype="audio" data-toggle="modal" data-target="#ms_lyric_modal_id"><span class="play_all">
 
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512"  xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="M448,16H128a8,8,0,0,0-8,8V416H64a8,8,0,0,0-8,8v32a40.045,40.045,0,0,0,40,40H416a40.045,40.045,0,0,0,40-40V24A8,8,0,0,0,448,16ZM216,32H360V176H216ZM96,480a24.028,24.028,0,0,1-24-24V432H376v24a39.792,39.792,0,0,0,8.019,24Zm344-24a24,24,0,0,1-48,0V424a8,8,0,0,0-8-8H136V32h64V184a8,8,0,0,0,8,8H368a8,8,0,0,0,8-8V32h64Z" fill="#ffffff" data-original="#000000" ></path><path xmlns="http://www.w3.org/2000/svg" d="M340.923,49.694a7.988,7.988,0,0,0-6.863-1.455l-64,16A8,8,0,0,0,264,72v41.376A24,24,0,1,0,280,136V78.246l48-12v31.13A24,24,0,1,0,344,120V56A8,8,0,0,0,340.923,49.694ZM256,144a8,8,0,1,1,8-8A8.009,8.009,0,0,1,256,144Zm64-16a8,8,0,1,1,8-8A8.009,8.009,0,0,1,320,128Z" fill="#ffffff" data-original="#000000"></path><path xmlns="http://www.w3.org/2000/svg" d="M248,224h80a8,8,0,0,0,0-16H248a8,8,0,0,0,0,16Z" fill="#ffffff" data-original="#000000" ></path><path xmlns="http://www.w3.org/2000/svg" d="M368,240H208a8,8,0,0,0,0,16H368a8,8,0,0,0,0-16Z" fill="#ffffff" data-original="#000000"></path><path xmlns="http://www.w3.org/2000/svg" d="M360,280a8,8,0,0,0-8-8H224a8,8,0,0,0,0,16H352A8,8,0,0,0,360,280Z" fill="#ffffff" data-original="#000000"></path><path xmlns="http://www.w3.org/2000/svg" d="M248,320a8,8,0,0,0,0,16h80a8,8,0,0,0,0-16Z" fill="#ffffff" data-original="#000000"></path><path xmlns="http://www.w3.org/2000/svg" d="M368,352H208a8,8,0,0,0,0,16H368a8,8,0,0,0,0-16Z" fill="#ffffff" data-original="#000000" ></path><path xmlns="http://www.w3.org/2000/svg" d="M352,384H224a8,8,0,0,0,0,16H352a8,8,0,0,0,0-16Z" fill="#ffffff" data-original="#000000"></path></g></svg>
@@ -165,12 +165,12 @@
                                         <div class="slider_cbox slider_artist_box text-center play_box_container">
                                             <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                 @if($similarAudio->image != '' && file_exists(public_path('images/audio/thumb/'.$similarAudio->image)))
-                                                    <img src="{{ asset('public/images/audio/thumb/'.$similarAudio->image) }}" alt="" class="img-fluid">
+                                                    <img src="{{ asset('images/audio/thumb/'.$similarAudio->image) }}" alt="" class="img-fluid">
                                                 @else
                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                 @endif   
                                                 <div class="ms_play_icon">
-                                                    <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                    <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                 </div>
                                             </div>
                                             <div class="slider_ctext slider_artist_text">
@@ -214,7 +214,7 @@
                                     <li class="comment">
                                         <div class="comment-body ms_comment_section">
                                             <div class="comment-author comment_img">
-                                                <img alt="" src="{{ !empty($user) && $user[0]->image != '' ? asset('public/images/user/'.$user[0]->image) : asset('public/assets/images/users/profile.svg') }}" alt="" width="50px" height="50px">
+                                                <img alt="" src="{{ !empty($user) && $user[0]->image != '' ? asset('images/user/'.$user[0]->image) : asset('assets/images/users/profile.svg') }}" alt="" width="50px" height="50px">
                                             </div>
                                             <div class="comment_info">
                                                 <div class="comment_head">
@@ -238,7 +238,7 @@
                                                     <div class="comment-body ms_comment_section">
                                                         <div class="comment-author comment_img">
                                                             
-                                                            <img alt="" src="{{ !empty($usersInfo) && $usersInfo->image != '' ? asset('public/images/user/'.$usersInfo->image) : asset('public/assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
+                                                            <img alt="" src="{{ !empty($usersInfo) && $usersInfo->image != '' ? asset('images/user/'.$usersInfo->image) : asset('assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
                                                         </div>
                                                         <div class="comment-meta commentmetadata comment_info">
                                                             <div class="comment_head">
@@ -315,6 +315,6 @@
 </div>
 @endsection 
 @section('script')
-<script src="{{asset('public/assets/js/star-rating.js')}}"></script>
+<script src="{{asset('assets/js/star-rating.js')}}"></script>
 
 @endsection

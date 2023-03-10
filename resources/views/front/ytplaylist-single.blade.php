@@ -25,7 +25,7 @@
                                     $ytImage = $music->snippet->thumbnails->high->url;
                                 }elseif(isset($music->snippet->thumbnails->default->url) && !empty($music->snippet->thumbnails->default->url)){
                                     $ytImage = $music->snippet->thumbnails->default->url;
-                                }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                }else{ $ytImage = 'images/yt_music.webp'; }
 
                                 if(isset($music->snippet->resourceId->videoId) && !empty($music->snippet->resourceId->videoId)){
                                     $videoId = $music->snippet->resourceId->videoId;
@@ -44,7 +44,7 @@
                                             <div class="ms_main_overlay">
                                                 <div class="ms_box_overlay"></div>                                                             
                                                 <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $music->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                    <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                    <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                 </div>
                                             </div>                                            
                                         </div>

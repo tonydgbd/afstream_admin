@@ -58,7 +58,7 @@
                                 <div class="pyment_rightheader text-sm-end">
                                     
                                     <h5 class="mb-2">{{ __('adminWords.payment_method') }}:</h5>
-                                    <p><img src="{{ asset('public/assets/images/Payment/'.ucfirst($paymentData->payment_gateway).'.png') }}"></p>
+                                    <p><img src="{{ asset('assets/images/Payment/'.ucfirst($paymentData->payment_gateway).'.png') }}"></p>
                                     @php
                                         $exp = explode('_',$paymentData->payment_gateway);
                                     @endphp

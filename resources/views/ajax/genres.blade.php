@@ -21,7 +21,7 @@
                                         $html = '';
                                         foreach($genres as $genre) {
                                             if($genre->image != '' && file_exists(public_path('images/audio/audio_genre/'.$genre->image))){
-                                                $img = '<img src="'.asset('public/images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
+                                                $img = '<img src="'.asset('images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
                                             }else{
                                                 $img = '<img src="'.dummyImage('genre').'" alt="" class="img-fluid">';
                                             }
@@ -32,7 +32,7 @@
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'
                                                         
                                                              <div class="ms_play_icon">
-                                                                <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                                <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                             </div>
                                                         </div>
                                                        

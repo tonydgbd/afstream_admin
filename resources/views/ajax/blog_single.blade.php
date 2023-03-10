@@ -20,7 +20,7 @@
                                         <article class="hentry">
                                             <div class="ms_single_page_image">
                                                 <span class="ms_blog_date">{{ date('F d, Y', strtotime($blog[0]->created_at)) }}</span>
-                                                    <img src="{{ asset('public/images/blogs/'.$blog[0]->image) }}" alt="{{ $blog[0]->title }}">
+                                                    <img src="{{ asset('images/blogs/'.$blog[0]->image) }}" alt="{{ $blog[0]->title }}">
                                             </div>
                                             <header class="entry-header">
                                                 <div class="entry-meta">
@@ -59,7 +59,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body ms_comment_section">
                                                         <div class="comment-author comment_img">
-                                                            <img alt="" src="{{ !empty($userInfo) && $userInfo->image != '' ? asset('public/images/user/'.$usersInfo->image) : asset('public/assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
+                                                            <img alt="" src="{{ !empty($userInfo) && $userInfo->image != '' ? asset('images/user/'.$usersInfo->image) : asset('assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
                                                         </div>
                                                         <div class="comment_info">
                                                             <div class="comment_head">
@@ -81,7 +81,7 @@
                                                         <li class="comment">
                                                             <div class="comment-body ms_comment_section">
                                                                 <div class="comment-author comment_img">
-                                                                    <img alt="" src="{{ !empty($usersInfo) && $usersInfo->image != '' ? asset('public/images/user/'.$usersInfo->image) : asset('public/assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
+                                                                    <img alt="" src="{{ !empty($usersInfo) && $usersInfo->image != '' ? asset('images/user/'.$usersInfo->image) : asset('assets/images/users/profile.jpg') }}" class="avatar avatar-80 photo" height="80" width="80">
                                                                 </div>
                                                                 <div class="comment-meta commentmetadata comment_info">
                                                                     <div class="comment_head">

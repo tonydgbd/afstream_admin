@@ -8,7 +8,7 @@
             @endphp
             <div class="album_single_img">
                 @if($artist[0]->image != '' && file_exists(public_path('images/artist/'.$artist[0]->image)))
-                    <img src="{{ asset('public/images/artist/'.$artist[0]->image) }}" alt="" class="img-fluid">
+                    <img src="{{ asset('images/artist/'.$artist[0]->image) }}" alt="" class="img-fluid">
                 @else
                     <img src="{{ dummyImage('artist') }}" alt="" class="img-fluid">
                 @endif            
@@ -18,8 +18,8 @@
                 <p class="singer_name">{{ $genre_name }}</p>
                 <div class="about_artist">{{ $artist[0]->description }} </div>
                 <div class="album_btn">
-                    <a href="#" class="ms_btn play_btn play_music" data-musicid="{{ $artist[0]->id }}" data-musictype="artist" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('public/assets/images/svg/play_all.svg') }}" alt="">{{ __('frontWords.play_all') }}</span><span class="pause_all"><img src="{{ asset('public/assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
-                    <a href="javascript:void(0);" class="ms_btn add_to_queue" data-musicid="{{ $artist[0]->id }}" data-musictype="artist"><span class="play_all"><img src="{{ asset('public/assets/images/svg/add_q.svg') }}" alt="">{{ __('frontWords.add_to_queue') }}</span></a>
+                    <a href="#" class="ms_btn play_btn play_music" data-musicid="{{ $artist[0]->id }}" data-musictype="artist" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('assets/images/svg/play_all.svg') }}" alt="">{{ __('frontWords.play_all') }}</span><span class="pause_all"><img src="{{ asset('assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
+                    <a href="javascript:void(0);" class="ms_btn add_to_queue" data-musicid="{{ $artist[0]->id }}" data-musictype="artist"><span class="play_all"><img src="{{ asset('assets/images/svg/add_q.svg') }}" alt="">{{ __('frontWords.add_to_queue') }}</span></a>
                 </div>
             </div>
             <div class="album_more_optn list_more">
@@ -92,8 +92,8 @@
                                         <ul> 
                                             <li class="play_music" data-musicid="{{ $audios->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><span class="play_no">{{ $cnt }}</span>
                                                 <span class="play_hover">
-                                                    <img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
-                                                    <img src="{{ asset('public/images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
+                                                    <img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
+                                                    <img src="{{ asset('images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
                                                 </span>
                                             </li>
                                             <li><a class="play_music" data-musicid="{{ $audios->id }}" data-musictype="audio" data-url="{{ url('/songs') }}" href="javascript:void(0)">{{ $audios->audio_title }}</a></li>

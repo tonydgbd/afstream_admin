@@ -26,7 +26,7 @@
                         <div class="ms_main_overlay">
                             <div class="ms_box_overlay"></div>
                             <div class="ms_more_icon">
-                                <img src="{{ asset('public/assets/images/svg/more.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/svg/more.svg') }}" alt="">
                             </div>
                             <ul class="more_option">
                                 <li><a href="javascript:;" class="addToFavourite" data-favourite="{{ $radio->id }}" data-type="radio"><span class="opt_icon"><span class="icon icon_fav"></span></span>{{ __('frontWords.favourites') }}</a></li>
@@ -34,7 +34,7 @@
                                 <li><a href="javascript:;" class="ms_share_music" data-shareuri="{{ url('images/radio/'.$radio->image) }}" data-sharename="{{ $radio->radio_name }} "><span class="opt_icon"><span class="icon icon_share"></span></span>{{ __('frontWords.share') }}</a></li>
                             </ul>
                             <div class="ms_play_icon play_btn play_icon_btn  play_music" data-musicid="{{ $radio->id }}" data-musictype="radio" data-url="{{ url('/songs') }}">
-                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                             </div>
                         </div>
                     </div>

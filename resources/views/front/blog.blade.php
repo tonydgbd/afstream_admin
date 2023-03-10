@@ -25,7 +25,7 @@
                                                 $html = '';
                                                 foreach($blogs as $blog) {
                                                     if($blog->image != '' && file_exists(public_path('images/blogs/'.$blog->image))){
-                                                        $img = ' <img src="'.asset('public/images/blogs/'.$blog->image).'" class="img-fluid">';
+                                                        $img = ' <img src="'.asset('images/blogs/'.$blog->image).'" class="img-fluid">';
                                                     }else{
                                                         $img = '<img src="'.dummyImage('blog').'" class="img-fluid">';
                                                     }
@@ -113,7 +113,7 @@
                                 </section>
                                 
                                 <!--<section class="widget widget_image">-->
-                                <!--    <img src="https://pixelnx.in/musioo_artist/public/assets/images/offer-banner-img.jpg" alt="Musioo" />-->
+                                <!--    <img src="https://pixelnx.in/musioo_artist/assets/images/offer-banner-img.jpg" alt="Musioo" />-->
                                 <!--</section>-->
                                 
                             </div>

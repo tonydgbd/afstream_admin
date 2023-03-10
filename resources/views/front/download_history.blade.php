@@ -49,8 +49,8 @@
                                     @if(!empty($audioDetail))
                                         <li class="play_music" data-musicid="{{ $audioDetail->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><span class="play_no">{{ $i++ }}</span>
                                             <span class="play_hover">
-                                                <img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
-                                                <img src="{{ asset('public/images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
+                                                <img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
+                                                <img src="{{ asset('images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
                                             </span>
                                         </li>
                                         <li class="text-center">{{ $audioDetail->audio_title }}</li>

@@ -40,7 +40,7 @@
                                                         $ytImage = $ytVideo->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytVideo->snippet->thumbnails->default->url) && !empty($ytVideo->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytVideo->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytVideo->id) && !empty($ytVideo->id)){
                                                         $videoId = $ytVideo->id;
@@ -63,7 +63,7 @@
                                                             </div>                                                            
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytVideo->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                             </div>
 
                                                             <div class="slider_ctext slider_artist_text">
@@ -120,7 +120,7 @@
                                                         $ytImage = $ytplaylist->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytplaylist->snippet->thumbnails->default->url) && !empty($ytplaylist->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytplaylist->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytplaylist->snippet->resourceId->videoId) && !empty($ytplaylist->snippet->resourceId->videoId)){
                                                         $videoId = $ytplaylist->snippet->resourceId->videoId;
@@ -138,7 +138,7 @@
                                                             </div>
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                                <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                             </div>
                                                             <div class="slider_ctext slider_artist_text">
                                                                 <a href="javascript:void(0)" class="yt_music limited_text_line" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">{{ $ytplaylist->snippet->title }}</a>           
@@ -234,13 +234,13 @@
                                                             <div class="slider_cbox">
                                                                 <div class="slider_cimgbox">
                                                                     @if($artist->image != '' && file_exists(public_path('images/artist/'.$artist->image)))
-                                                                        <img src="{{ asset('public/images/artist/'.$artist->image) }}" alt="" class="img-fluid">
+                                                                        <img src="{{ asset('images/artist/'.$artist->image) }}" alt="" class="img-fluid">
                                                                     @else
                                                                         <img src="{{ dummyImage('artist') }}" alt="" class="img-fluid">
                                                                     @endif   
                                                                     <div class="ms_play_icon play_btn play_music" data-musicid="{{ $artist->id }}" 
                                                                         data-musictype="artist" data-url="{{ url('/songs') }} ">
-                                                                        <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                                        <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                                     </div>
                                                                 </div>
                                                                 <div class="slider_ctext">
@@ -313,12 +313,12 @@
                                                                     <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                         <div class="songslist_number">
                                                                             <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                            <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                            <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                         </div> 
                                                                         <div class="songslist_details">
                                                                             <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                                 @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                    <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                    <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                                 @else
                                                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                                 @endif
@@ -486,12 +486,12 @@
                                                                     <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                         <div class="songslist_number">
                                                                             <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                            <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                            <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                         </div> 
                                                                         <div class="songslist_details">
                                                                             <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                                 @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                    <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                    <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                                 @else
                                                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                                 @endif
@@ -656,12 +656,12 @@
                                                                     <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                         <div class="songslist_number">
                                                                             <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                            <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                            <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                         </div> 
                                                                         <div class="songslist_details">
                                                                             <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                                 @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                    <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                    <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                                 @else
                                                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                                 @endif
@@ -829,12 +829,12 @@
                                             <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                 <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                     @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                        <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                        <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                     @else
                                                         <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                     @endif
                                                     <div class="ms_play_icon play_music" data-musicid="{{ $album->id }}" data-musictype="album" data-url="{{ url('/songs') }}">
-                                                        <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                        <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                     </div>
                                                 </div>
                                                 <div class="slider_ctext slider_artist_text">
@@ -877,7 +877,7 @@
                                                     $html = '';
                                                     foreach($genres as $genre) {
                                                         if($genre->image != '' && file_exists(public_path('images/audio/audio_genre/'.$genre->image))){
-                                                            $img = '<img src="'.asset('public/images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
+                                                            $img = '<img src="'.asset('images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
                                                         }else{
                                                             $img = '<img src="'.dummyImage('genre').'" alt="" class="img-fluid">';
                                                         }
@@ -932,7 +932,7 @@
                             @endphp
                         @endif                            
                         <!-- Ad Img Here -->
-                        <!-- <img src="{{ asset('public/assets/images/ad.jpg') }}" alt=""> -->                           
+                        <!-- <img src="{{ asset('assets/images/ad.jpg') }}" alt=""> -->                           
                        </div>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 @extends('layouts.front.main')
 @section('title', __('frontWords.blog_single'))
 @section('style')
-    <link href="{{ asset('public/assets/css/front/bootstrap.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('public/assets/css/front/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/front/bootstrap.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/front/style.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
     @section('content')

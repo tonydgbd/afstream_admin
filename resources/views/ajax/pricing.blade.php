@@ -1,6 +1,6 @@
 
 @section('style')
-    <link href="{{ asset('public/assets/plugins/select2/select2.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/plugins/select2/select2.min.css') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
 @php
@@ -33,7 +33,7 @@
                             <div class="ms_plan_header">
                                 <div class="ms_plan_img">
                                     @if($plan->image != '' && file_exists(public_path('images/plan/'.$plan->image)))
-                                        <img src="{{ asset('public/images/plan/'.$plan->image) }}" alt="">
+                                        <img src="{{ asset('images/plan/'.$plan->image) }}" alt="">
                                     @else
                                         <img src="{{ dummyImage('plan') }}" alt="" class="img-fluid">
                                     @endif
@@ -72,7 +72,7 @@
     
 
 @section('script')
-    <script src="{{ asset('public/assets/plugins/select2/select2.min.js') }}"></script> 
+    <script src="{{ asset('assets/plugins/select2/select2.min.js') }}"></script> 
 @endsection
 
     

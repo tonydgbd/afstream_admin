@@ -4,35 +4,35 @@
             if(isset($settings['preloader']) && isset($settings['is_preloader']) && $settings['is_preloader'] == 1){
                 echo '<div class="ms_loader">
                         <div class="wrap">
-                            <img src="'.url('public/images/sites/'.$settings['preloader']).'" alt="">
+                            <img src="'.url('images/sites/'.$settings['preloader']).'" alt="">
                         </div>
                     </div>
                     <div class="ms_ajax_loader d-none">
                         <div class="wrap">
-                            <img src="'.url('public/images/sites/'.$settings['preloader']).'" alt="">
+                            <img src="'.url('images/sites/'.$settings['preloader']).'" alt="">
                         </div>
                     </div>';
             }else if(!isset($settings['is_preloader'])){
                 echo '<div class="ms_loader">
                     <div class="wrap">
-                        <img src="'.url('public/assets/images/loader.gif').'" alt="">
+                        <img src="'.url('assets/images/loader.gif').'" alt="">
                     </div>
                 </div>
                 <div class="ms_ajax_loader d-none">
                     <div class="wrap">
-                        <img src="'.url('public/assets/images/loader.gif').'" alt="">
+                        <img src="'.url('assets/images/loader.gif').'" alt="">
                     </div>
                 </div>';
             }
         }else{
             echo '<div class="ms_loader">
                     <div class="wrap">
-                    <img src="'.url('public/assets/images/loader.gif').'" alt="">
+                    <img src="'.url('assets/images/loader.gif').'" alt="">
                     </div>
                 </div>
                 <div class="ms_ajax_loader d-none">
                     <div class="wrap">
-                        <img src="'.url('public/assets/images/loader.gif').'" alt="">
+                        <img src="'.url('assets/images/loader.gif').'" alt="">
                     </div>
                 </div>';
         }
@@ -49,11 +49,11 @@
             <div class="ms_sidemenu_inner">
                 <div class="ms_logo_inner">
                     <div class="ms_logo">
-                        <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['large_logo']) && $settings['large_logo'] != '' ? asset('public/images/sites/'.$settings['large_logo']) : '' ) }}" alt="" class="img-fluid"/></a>
+                        <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['large_logo']) && $settings['large_logo'] != '' ? asset('images/sites/'.$settings['large_logo']) : '' ) }}" alt="" class="img-fluid"/></a>
                        
                     </div>
                     <div class="ms_logo_mini">
-                        <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['mini_logo']) && $settings['mini_logo'] != '' ? asset('public/images/sites/'.$settings['mini_logo']) : '' ) }}" alt="" class="img-fluid"/></a>
+                        <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['mini_logo']) && $settings['mini_logo'] != '' ? asset('images/sites/'.$settings['mini_logo']) : '' ) }}" alt="" class="img-fluid"/></a>
                     </div>
                 </div>
                 
@@ -163,7 +163,7 @@
                             <input type="text" class="form-control" id="search_value" placeholder="{{ __('frontWords.search').' '.__('frontWords.music').' '.__('frontWords.here') }}" value="@yield('search')">
 
                             <span class="search_icon searchData">
-                                <img src="{{ asset('public/assets/images/svg/search.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/svg/search.svg') }}" alt="">
                             </span>
                         </div>
                         @if(isset(Auth::user()->id))
@@ -243,7 +243,7 @@
 
                         @if(isset(Auth::user()->id))
                             <div class="ms_top_lang">
-                                <span data-toggle="modal" data-target="#lang_modal">{{ __('frontWords.music').' '.__('frontWords.languages') }}<img src="{{ asset('public/assets/images/svg/lang.svg') }}" alt=""></span> 
+                                <span data-toggle="modal" data-target="#lang_modal">{{ __('frontWords.music').' '.__('frontWords.languages') }}<img src="{{ asset('assets/images/svg/lang.svg') }}" alt=""></span> 
                             </div>                
                         @endif
                         
@@ -254,12 +254,12 @@
 
                                     <div class="ms_pro_img"> 
                                         @if(!empty(Auth::user()->image))
-                                            <img src="{{ asset('public/images/user/'.Auth::user()->image) }}" alt="Profile">
+                                            <img src="{{ asset('images/user/'.Auth::user()->image) }}" alt="Profile">
                                         @else
                                             <img src="{{ Avatar::create($users->name)->toBase64() }}" />
                                         @endif
                                         @if(Auth::user()->role == 2 && Auth::user()->artist_verify_status == 'A')
-                                            <img class="front_img_artist_verified" src="{{ asset('public/assets/images/veryfied_user.svg') }}" alt="verified">
+                                            <img class="front_img_artist_verified" src="{{ asset('assets/images/veryfied_user.svg') }}" alt="verified">
                                         @endif
                                     </div>
                                     <div class="ms_pro_namewrap">

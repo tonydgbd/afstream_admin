@@ -13,7 +13,7 @@ if(!isset(Auth::user()->id)){ @endphp
                                     <div class="fw-col-xs-12">
                                         <div class="ms_needlogin">
                                             <div class="needlogin_img">
-                                                <img src="{{ asset('public/assets/images/svg/headphones.svg') }}" alt="">
+                                                <img src="{{ asset('assets/images/svg/headphones.svg') }}" alt="">
                                             </div>
                                             <h2>{{ __('frontWords.need_to_login') }}</h2>
                                             <a href="javascript:void(0);" class="ms_btn reg_btn" data-toggle="modal" data-target="#loginModal">
@@ -56,7 +56,7 @@ if(!isset(Auth::user()->id)){ @endphp
                         if(sizeof($playlist) > 0){
                                 
                             foreach($playlist as $list){ 
-                                $img = asset('public/assets/images/playlist.jpg');
+                                $img = asset('assets/images/playlist.jpg');
                                 if(!empty($list->song_list) && $list->song_list != ''){
                                     $songs = json_decode($list->song_list);
                                     if(!empty($songs)){
@@ -68,7 +68,7 @@ if(!isset(Auth::user()->id)){ @endphp
                         <div class="ms_rcnt_box marger_bottom25 playlist_boxes">
                             <div class="ms_rcnt_box_img">
                                 <a class="getAjaxRecord" data-type="playlist" data-url="{{ url('playlist/single/'.$list->id) }}" href="javascript:void(0)">
-                                    <img src="{{ $img == '[]' ? asset('public/assets/images/playlist.jpg') : $img  }}" alt="" class="img-fluid">
+                                    <img src="{{ $img == '[]' ? asset('assets/images/playlist.jpg') : $img  }}" alt="" class="img-fluid">
                                     <div class="album_more_optn list_more">
                                         <ul>
                                             <li class="list_more">
@@ -162,7 +162,7 @@ if(!isset(Auth::user()->id)){ @endphp
                     <div class="col-xxl-2 col-xl-4 col-lg-6 col-md-6">
                         <div class="ms_rcnt_box marger_bottom25">
                             <div class="create_playlist">
-                                <img src="{{ asset('public/images/add-to-playlist.png') }}" alt="add-to-playlist" class="img-fluid">
+                                <img src="{{ asset('images/add-to-playlist.png') }}" alt="add-to-playlist" class="img-fluid">
                             </div>
                             <div class="ms_rcnt_box_text">
                                 <h3><a href="javascript:void();">{{ __('frontWords.create_playlist') }}</a></h3>

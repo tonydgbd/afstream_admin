@@ -29,12 +29,12 @@
                                         <div class="slider_cbox slider_artist_box text-center play_box_container mb-20">
                                             <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                 @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                    <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                    <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                 @else
                                                     <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                 @endif 
                                                 <div class="ms_play_icon play_music" data-musicid="{{ $album->id }}" data-musictype="album" data-url="{{ url('/songs') }}">
-                                                    <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                    <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                 </div>
                                             </div>
                                             <div class="slider_ctext slider_artist_text">
@@ -82,12 +82,12 @@
                                         <div class="slider_cbox slider_artist_box text-center play_box_container mb-20">
                                             <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                 @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                    <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                    <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                 @else
                                                     <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                 @endif  
                                                 <div class="ms_play_icon play_music" data-musicid="{{ $album->id }}" data-musictype="album" data-url="{{ url('/songs') }}">
-                                                    <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                    <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                 </div>
                                             </div>
                                             <div class="slider_ctext slider_artist_text">

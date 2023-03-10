@@ -12,7 +12,7 @@
         <div class="ms_prodile_form"> 
             <form action="{{url('update_profile')}}" method="post" id="updateUserForm" enctype="multipart/form-data">
                 <div class="ms_pro_img">
-                    <img src="{{ ($user->image != '' ? asset('public/images/user/'.$user->image) : asset('public/assets/images/users/profile.svg')) }}" alt="" id="showuserProfileImage" class="img-fluid">
+                    <img src="{{ ($user->image != '' ? asset('images/user/'.$user->image) : asset('assets/images/users/profile.svg')) }}" alt="" id="showuserProfileImage" class="img-fluid">
                     <label class="pro_img_overlay">
                         <input class="form-control pz_filed_file" name="user_image" data-dimension="500x500" data-ext="['jpg','jpeg','png']"  data-image="Image can not be blank." type="file" id="basicImage" data-id="showuserProfileImage">
                         <i class="fa_icon edit_icon"></i>

@@ -20,7 +20,7 @@
                                             <article class="hentry">
                                                 <div class="ms_single_page_image">
                                                     <span class="ms_blog_date">{{ date('F d, Y', strtotime($blog->created_at)) }}</span>
-                                                        <img src="{{ asset('public/images/blogs/'.$blog->image) }}" alt="{{ $blog->title }}">
+                                                        <img src="{{ asset('images/blogs/'.$blog->image) }}" alt="{{ $blog->title }}">
                                                 </div>
                                                 <header class="entry-header">
                                                     <div class="entry-meta">

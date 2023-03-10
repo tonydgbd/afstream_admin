@@ -29,7 +29,7 @@
                                     @csrf
                                     <input type="hidden" name="token" value="{{ $token }}">
                                     <div class="form-head">
-                                        <a href="{{ url('/') }}"><img src="{{ (isset($settings['logo']) ? asset('public/images/sites/'.$settings['logo']) : '') }}" alt="" class="img-fluid"/></a>
+                                        <a href="{{ url('/') }}"><img src="{{ (isset($settings['logo']) ? asset('images/sites/'.$settings['logo']) : '') }}" alt="" class="img-fluid"/></a>
                                     </div>                                        
                                     <h4 class="auth-title">{{ __('adminWords.reset_password') }}</h4>
                                     <div class="form-group">

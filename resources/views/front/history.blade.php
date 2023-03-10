@@ -39,12 +39,12 @@
                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img play_btn play_music play_icon_btn" data-musictype="audio" data-url="{{ url('/songs') }}" data-musicid="{{ $audio->id }}">
                                                             @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="" class="img-fluid">
+                                                                <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="" class="img-fluid">
                                                             @else
                                                                 <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                             @endif
                                                             <div class="ms_play_icon">
-                                                                <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                                <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                             </div>
                                                         </div>
                                                         <div class="slider_ctext slider_artist_text">
@@ -89,7 +89,7 @@
                                             <div class="fw-col-xs-12">
                                                 <div class="ms_needlogin">
                                                     <div class="needlogin_img">
-                                                        <img src="'.asset('public/assets/images/svg/headphones.svg').'" alt="">
+                                                        <img src="'.asset('assets/images/svg/headphones.svg').'" alt="">
                                                     </div>
                                                     <h2>'.__("frontWords.need_to_login").'</h2>
                                                     <a href="javascript:void(0);" class="ms_btn reg_btn" data-toggle="modal" data-target="#loginModal">

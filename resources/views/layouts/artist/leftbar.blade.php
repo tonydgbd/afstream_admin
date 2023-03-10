@@ -3,10 +3,10 @@
             <div class="logo-wrapper">
                 <a href="{{ route('artist.home') }}" class="admin-logo">
                     @if(isset($settings['large_logo']))
-                        <img src="{{ asset('public/images/sites/'.$settings['large_logo']) }}" class="sp_logo" alt="large_logo">
+                        <img src="{{ asset('images/sites/'.$settings['large_logo']) }}" class="sp_logo" alt="large_logo">
                     @endif
                     @if(isset($settings['mini_logo']))
-                        <img src="{{ asset('public/images/sites/'.$settings['mini_logo']) }}" class="sp_mini_logo" alt="mini_logo">
+                        <img src="{{ asset('images/sites/'.$settings['mini_logo']) }}" class="sp_mini_logo" alt="mini_logo">
                     @endif                    
                 </a>
             </div>

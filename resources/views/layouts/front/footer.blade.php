@@ -21,7 +21,7 @@
             <div class="ms_footer_wrapper">
                 
                 <div class="ms_footer_logo">                
-                    <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['mini_logo']) && $settings['mini_logo'] != '' ? asset('public/images/sites/'.$settings['mini_logo']) : asset('public/images/mini_logo.png')) }}" alt="" class="img-fluid"/></a>
+                    <a class="getAjaxRecord" data-type="{{ $homepage }}" data-url="{{ url('/home') }}" href="javascript:void(0)"><img src="{{ (isset($settings['mini_logo']) && $settings['mini_logo'] != '' ? asset('images/sites/'.$settings['mini_logo']) : asset('images/mini_logo.png')) }}" alt="" class="img-fluid"/></a>
                 </div>
                 <div class="ms_footer_inner container-fluid">
                     <div class="row">
@@ -40,8 +40,8 @@
                             <div class="footer_box footer_app">
                                 <h1 class="footer_title">{{ (isset($settings['section_2_heading']) ? $settings['section_2_heading'] : __('frontWords.download_app'))  }}</h1>
                                 <p>{{ (isset($settings['section_2_description']) ? $settings['section_2_description'] : __('frontWords.section_2_desc'))  }}</p>
-                                <a href="{{ isset($settings['google_play_url']) ? $settings['google_play_url'] : '#' }}" class="foo_app_btn"><img src="{{ asset('public/assets/images/google_play.jpg') }}" alt="" class="img-fluid"></a>
-                                <a href="{{ isset($settings['app_store_url']) ? $settings['app_store_url'] : '#' }}" class="foo_app_btn"><img src="{{ asset('public/assets/images/app_store.jpg') }}" alt="" class="img-fluid"></a>
+                                <a href="{{ isset($settings['google_play_url']) ? $settings['google_play_url'] : '#' }}" class="foo_app_btn"><img src="{{ asset('assets/images/google_play.jpg') }}" alt="" class="img-fluid"></a>
+                                <a href="{{ isset($settings['app_store_url']) ? $settings['app_store_url'] : '#' }}" class="foo_app_btn"><img src="{{ asset('assets/images/app_store.jpg') }}" alt="" class="img-fluid"></a>
                             </div>
                         </div>
                         @php
@@ -72,7 +72,7 @@
                                 <ul class="foo_con_info">
                                     <li>
                                         <div class="foo_con_icon">
-                                            <img src="{{ asset('public/assets/images/svg/phone.svg') }}" alt="">
+                                            <img src="{{ asset('assets/images/svg/phone.svg') }}" alt="">
                                         </div>
                                         <div class="foo_con_data">
                                             <span class="con-title">{{ __('frontWords.call_us') }}:</span>
@@ -81,7 +81,7 @@
                                     </li>
                                     <li>
                                         <div class="foo_con_icon">
-                                            <img src="{{ asset('public/assets/images/svg/message.svg') }}" alt="">
+                                            <img src="{{ asset('assets/images/svg/message.svg') }}" alt="">
                                         </div>
                                         <div class="foo_con_data">
                                             <span class="con-title">{{ __('frontWords.email_us') }} :</span>
@@ -103,7 +103,7 @@
                                     </li>
                                     <li>
                                         <div class="foo_con_icon">
-                                            <img src="{{ asset('public/assets/images/svg/add.svg') }}" alt="">
+                                            <img src="{{ asset('assets/images/svg/add.svg') }}" alt="">
                                         </div>
                                         <div class="foo_con_data">
                                             <span class="con-title">{{ __('frontWords.walk_in') }} :</span>

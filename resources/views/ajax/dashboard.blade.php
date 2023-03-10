@@ -55,12 +55,12 @@
                                                                 <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                     <div class="songslist_number">
                                                                         <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                        <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                        <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                     </div> 
                                                                     <div class="songslist_details">
                                                                         <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                             @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                             @else
                                                                                 <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                             @endif
@@ -210,12 +210,12 @@
                                                                 <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                     <div class="songslist_number">
                                                                         <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                        <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                        <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                     </div> 
                                                                     <div class="songslist_details">
                                                                         <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                             @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                             @else
                                                                                 <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                             @endif
@@ -365,12 +365,12 @@
                                                                 <div class="ms_songslist_left play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                     <div class="songslist_number">
                                                                         <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                        <span class="songslist_play"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
+                                                                        <span class="songslist_play"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid"/></span>
                                                                     </div> 
                                                                     <div class="songslist_details">
                                                                         <div class="songslist_thumb play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                                             @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                             @else
                                                                                 <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                             @endif

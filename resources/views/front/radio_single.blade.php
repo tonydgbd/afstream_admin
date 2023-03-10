@@ -15,7 +15,7 @@
     <div class="album_single_data">
         <div class="album_single_img">
             @if($radio->image != '' && file_exists(public_path('images/radio/'.$radio->image)))
-                <img src="{{ asset('public/images/radio/'.$radio[0]->image) }}" alt="" class="img-fluid">
+                <img src="{{ asset('images/radio/'.$radio[0]->image) }}" alt="" class="img-fluid">
             @else
                 <img src="{{ dummyImage('radio') }}" alt="" class="img-fluid">
             @endif            
@@ -28,11 +28,11 @@
                 <a href="#" class="album_date">Released {{ date("F d, Y", strtotime($radio[0]->created_at)) }}</a>
             </div>
             <div class="album_btn">
-                <a href="javascript:;" class="ms_btn play_btn play_music" data-musicid="{{ $radio[0]->id }}" data-musictype="radio" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('public/assets/images/svg/play_all.svg') }}" alt="">{{ __('frontWords.play_all') }}</span><span class="pause_all"><img src="{{ asset('public/assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
+                <a href="javascript:;" class="ms_btn play_btn play_music" data-musicid="{{ $radio[0]->id }}" data-musictype="radio" data-url="{{ url('/songs') }}"><span class="play_all"><img src="{{ asset('assets/images/svg/play_all.svg') }}" alt="">{{ __('frontWords.play_all') }}</span><span class="pause_all"><img src="{{ asset('assets/images/svg/pause_all.svg') }}" alt="">{{ __('frontWords.pause') }}</span></a>
             </div>
         </div>
         <div class="album_more_optn ms_more_icon">
-            <span><img src="{{ asset('public/assets/images/svg/more.svg') }}" alt=""></span>
+            <span><img src="{{ asset('assets/images/svg/more.svg') }}" alt=""></span>
         </div>
         <ul class="more_option">
         <li><a href="javascript:;" class="addToFavourite" data-favourite="{{ $radio[0]->id }}" data-type="radio"><span class="opt_icon"><span class="icon {{ ($getLikeDislikeRadio == 1 ? 'icon_fav_add' : 'icon_fav') }}"></span></span>{{ __('frontWords.favourites') }}</a></li>

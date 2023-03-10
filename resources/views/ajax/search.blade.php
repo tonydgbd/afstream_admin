@@ -30,7 +30,7 @@
                                         $ytImage = $music->snippet->thumbnails->high->url;
                                     }elseif(isset($music->snippet->thumbnails->default->url) && !empty($music->snippet->thumbnails->default->url)){
                                         $ytImage = $music->snippet->thumbnails->default->url;
-                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                     if(isset($music->id->videoId) && !empty($music->id->videoId)){
                                         $videoId = $music->id->videoId;
@@ -95,7 +95,7 @@
                                                     <div class="ms_box_overlay"></div>                                                     
 
                                                     <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $music->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                        <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                        <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                     </div>
                                                     
                                                 </div>                                            
@@ -140,14 +140,14 @@
                                                 <div class="ms_rcnt_box marger_bottom30">
                                                     <div class="ms_rcnt_box_img">
                                                         @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                            <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                            <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                         @else
                                                             <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                         @endif                                            
                                                         <div class="ms_main_overlay">
                                                             <div class="ms_box_overlay"></div>
                                                             <div class="ms_more_icon">
-                                                                <img src="{{ asset('public/assets/images/svg/more.svg') }}" alt="">
+                                                                <img src="{{ asset('assets/images/svg/more.svg') }}" alt="">
                                                             </div>
                                                             
                                                             <ul class="more_option">
@@ -156,7 +156,7 @@
                                                                 <li><a href="javascript:;" class="ms_share_music" data-shareuri="{{ url('images/album/'.$album->image) }}" data-sharename="{{ $album->album_name }} "><span class="opt_icon"><span class="icon icon_share"></span></span>{{ __('frontWords.share') }}</a></li>
                                                             </ul>
                                                             <div class="ms_play_icon play_btn play_music" data-musicid="{{ $album->id }}" data-musictype="album" data-url="{{ url('/songs') }}">
-                                                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                             </div>
                                                         </div>
                                                         
@@ -209,7 +209,7 @@
                                             <div class="ms_rcnt_box marger_bottom30">
                                                 <div class="ms_rcnt_box_img">
                                                     @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                        <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="" class="img-fluid">
+                                                        <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="" class="img-fluid">
                                                     @else
                                                         <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                     @endif
@@ -217,7 +217,7 @@
                                                     <div class="ms_main_overlay">
                                                         <div class="ms_box_overlay"></div>
                                                         <div class="ms_more_icon">
-                                                            <img src="{{ asset('public/assets/images/svg/more.svg') }}" alt="">
+                                                            <img src="{{ asset('assets/images/svg/more.svg') }}" alt="">
                                                         </div>
                                                         <ul class="more_option">
                                                             <li><a href="javascript:;" class="addToFavourite" data-favourite="{{ $audio->id }}" data-type="audio"><span class="opt_icon"><span class="icon icon_fav"></span></span>{{ __('frontWords.favourites') }}</a></li>
@@ -234,7 +234,7 @@
                                                             <li><a href="javascript:;" class="ms_share_music" data-shareuri="{{ url('images/audio/thumb/'.$audio->image) }}" data-sharename="{{ $audio->audio_title }} "><span class="opt_icon"><span class="icon icon_share"></span></span>{{ __('frontWords.share') }}</a></li>
                                                         </ul>
                                                         <div class="ms_play_icon play_btn play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
-                                                            <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                            <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -276,14 +276,14 @@
                                 <div class="ms_rcnt_box marger_bottom30">
                                     <div class="ms_rcnt_box_img">
                                         @if($artist->image != '' && file_exists(public_path('images/artist/'.$artist->image)))
-                                            <img src="{{ asset('public/images/artist/'.$artist->image) }}" alt="" class="img-fluid">
+                                            <img src="{{ asset('images/artist/'.$artist->image) }}" alt="" class="img-fluid">
                                         @else
                                             <img src="{{ dummyImage('artist') }}" alt="" class="img-fluid">
                                         @endif                                
                                         <div class="ms_main_overlay">
                                             <div class="ms_box_overlay"></div>
                                             <div class="ms_more_icon">
-                                                <img src="{{ asset('public/assets/images/svg/more.svg') }}" alt="">
+                                                <img src="{{ asset('assets/images/svg/more.svg') }}" alt="">
                                             </div>
                                             <ul class="more_option">
                                                 <li><a href="javascript:;" class="addToFavourite" data-favourite="{{ $artist->id }}" data-type="artist"><span class="opt_icon"><span class="icon icon_fav"></span></span>{{ __('frontWords.favourites') }}</a></li>
@@ -291,7 +291,7 @@
                                                 <li><a href="javascript:;" class="ms_share_music" data-shareuri="{{ url('images/artist'.$artist->image) }}" data-sharename="{{ $artist->artist_name }} "><span class="opt_icon"><span class="icon icon_share"></span></span>{{ __('frontWords.share') }}</a></li>
                                             </ul>
                                             <div class="ms_play_icon play_btn play_music" data-musicid="{{ $artist->id }}" data-musictype="artist" data-url="{{ url('/songs') }}">
-                                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                             </div>
                                         </div>
                                     </div>

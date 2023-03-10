@@ -49,8 +49,8 @@
                                                     <li class="play_music" data-musicid="{{ $audios->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                                         <span class="play_no">{{ $cnt }}</span>
                                                         <span class="play_hover">
-                                                            <img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
-                                                            <img src="{{ asset('public/images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
+                                                            <img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
+                                                            <img src="{{ asset('images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
                                                         </span>
                                                     </li>
                                                     <li><a href="javascript:void(0);" class="play_music" data-musicid="{{ $audios->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">{{ $audios->audio_title }}</a></li>
@@ -197,12 +197,12 @@
                                             <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                 <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                     @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                        <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                        <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                     @else
                                                         <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                     @endif 
                                                     <div class="ms_play_icon">
-                                                        <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                        <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                     </div>
                                                 </div>
                                                 <div class="slider_ctext slider_artist_text">
@@ -252,12 +252,12 @@
                                                 <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                     <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                         @if($artist->image != '' && file_exists(public_path('images/artist/'.$artist->image)))
-                                                            <img src="{{ asset('public/images/artist/'.$artist->image) }}" alt="" class="img-fluid">
+                                                            <img src="{{ asset('images/artist/'.$artist->image) }}" alt="" class="img-fluid">
                                                         @else
                                                             <img src="{{ dummyImage('artist') }}" alt="" class="img-fluid">
                                                         @endif   
                                                         <div class="ms_play_icon">
-                                                            <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                            <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                         </div>
                                                     </div>
                                                     <div class="slider_ctext slider_artist_text">
@@ -305,7 +305,7 @@
                                                 foreach($genres as $genre){
                                      
                                                     if($genre->image != '' && file_exists(public_path('images/audio/audio_genre/'.$genre->image))){
-                                                        $img = '<img src="'.asset('public/images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
+                                                        $img = '<img src="'.asset('images/audio/audio_genre/'.$genre->image).'" alt="" class="img-fluid">';
                                                     }else{
                                                         $img = '<img src="'.dummyImage('genre').'" alt="" class="img-fluid">';
                                                     }
@@ -358,7 +358,7 @@
                         foreach($favourite as $fav_id){ 
                             $playlist = select(['column' => '*', 'table' => 'playlists', 'where' => ['id'=>$fav_id] ]);                            
                             foreach($playlist as $list){
-                                $img = asset('public/assets/images/playlist.jpg');
+                                $img = asset('assets/images/playlist.jpg');
                                 if(!empty($list->song_list) && $list->song_list != ''){
                                     $songs = json_decode($list->song_list);
                                     if(!empty($songs)){
@@ -369,11 +369,11 @@
                 <div class="col-lg-2 col-md-6">
                         <div class="ms_rcnt_box marger_bottom25">
                             <div class="ms_rcnt_box_img">
-                                <img src="{{ $img == '[]' ? asset('public/assets/images/playlist.jpg') : $img  }}" alt="" class="img-fluid">
+                                <img src="{{ $img == '[]' ? asset('assets/images/playlist.jpg') : $img  }}" alt="" class="img-fluid">
                                 <div class="ms_main_overlay">
                                     <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="{{ asset('public/assets/images/svg/more.svg') }}" alt="More">
+                                            <img src="{{ asset('assets/images/svg/more.svg') }}" alt="More">
                                         </div>
                                         
                                         <ul class="more_option open_option remove_playlist">
@@ -409,7 +409,7 @@
                                             </li>
                                         </ul>
                                     <div class="ms_play_icon play_btn play_list_music play_icon_btn" data-musicid="{{ $list->id }}">
-                                        <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                        <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -445,7 +445,7 @@
                                                 <div class="fw-col-xs-12">
                                                     <div class="ms_needlogin">
                                                         <div class="needlogin_img">
-                                                            <img src="'.asset('public/assets/images/svg/headphones.svg').'" alt="">
+                                                            <img src="'.asset('assets/images/svg/headphones.svg').'" alt="">
                                                         </div>
                                                         <h2>'.__("frontWords.need_to_login").'</h2>
                                                         <a href="javascript:void(0);" class="ms_btn reg_btn" data-toggle="modal" data-target="#loginModal">

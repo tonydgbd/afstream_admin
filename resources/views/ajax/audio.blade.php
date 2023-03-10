@@ -22,7 +22,7 @@
                                                         <div class="music_center_mainbox text-center">
                                                             <div class="music_center_img">
                                                                 @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                                    <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                                    <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                                 @else
                                                                     <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                                 @endif
@@ -56,8 +56,8 @@
                             </div>                                
                             <!-- Add Arrows -->
                             <div class="slider_music_controls">                                
-                                <!-- <span class="swiper-music-next"><img src="public/images/svg/left_arrow.svg" alt="Arrow"></span>
-                                <span class="swiper-music-prev"><img src="public/images/svg/left_arrow.svg" alt="Arrow"></span> -->
+                                <!-- <span class="swiper-music-next"><img src="images/svg/left_arrow.svg" alt="Arrow"></span>
+                                <span class="swiper-music-prev"><img src="images/svg/left_arrow.svg" alt="Arrow"></span> -->
     
                                 <span class="swiper-music-next">
                                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6px" height="10px"><path fill-rule="evenodd" fill="rgb(142, 165, 194)" d="M5.715,8.455 L2.316,5.062 C2.275,5.022 2.275,4.957 2.316,4.918 L5.715,1.525 C6.065,1.176 6.065,0.610 5.715,0.261 L5.715,0.261 C5.365,-0.088 4.798,-0.088 4.448,0.261 L0.199,4.501 C-0.072,4.771 -0.072,5.209 0.199,5.479 L4.448,9.719 C4.798,10.068 5.365,10.068 5.715,9.719 L5.715,9.719 C6.065,9.370 6.065,8.804 5.715,8.455 Z"/></svg>
@@ -111,12 +111,12 @@
                                                                     <div class="ms_songslist_left">
                                                                         <div class="songslist_number">
                                                                             <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                            <span class="songslist_play play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="" class="img-fluid"/></span>
+                                                                            <span class="songslist_play play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="" class="img-fluid"/></span>
                                                                         </div> 
                                                                         <div class="songslist_details">
                                                                             <div class="songslist_thumb">
                                                                                 @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                    <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                    <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                                 @else
                                                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                                 @endif                                                               
@@ -272,7 +272,7 @@
                                                         $ytImage = $ytVideo->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytVideo->snippet->thumbnails->default->url) && !empty($ytVideo->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytVideo->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytVideo->id) && !empty($ytVideo->id)){
                                                         $videoId = $ytVideo->id;
@@ -295,7 +295,7 @@
                                                             </div>                                                            
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytVideo->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                             </div>
 
                                                             <div class="slider_ctext slider_artist_text">
@@ -354,7 +354,7 @@
                                                         $ytImage = $ytplaylist->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytplaylist->snippet->thumbnails->default->url) && !empty($ytplaylist->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytplaylist->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytplaylist->snippet->resourceId->videoId) && !empty($ytplaylist->snippet->resourceId->videoId)){
                                                         $videoId = $ytplaylist->snippet->resourceId->videoId;
@@ -372,7 +372,7 @@
                                                             </div>
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                                <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                             </div>
                                                             <div class="slider_ctext slider_artist_text">
                                                                 <a href="javascript:void(0)" class="slider_ctitle yt_music slider_artist_ttl limited_text_line" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">{{ $ytplaylist->snippet->title }}</a>           
@@ -482,7 +482,7 @@
                                                             }
                                                             
                                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
+                                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
                                                             }else{
                                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                                             }
@@ -490,7 +490,7 @@
                                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                                         <div class="ms_play_icon play_music" data-musicid="'.$audio->id.'" data-musictype="audio" data-url="'.url('/songs').'">
-                                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                                         </div>
                                                                         <div class="slider_ctext slider_artist_text">
                                                                         <a class="slider_ctitle slider_artist_ttl limited_text_line getAjaxRecord" data-type="audio" data-url="'.url('audio/single/'.$audio->id.'/'.$audio->audio_slug).'" href="javascript:void(0)">'.$audio->audio_title.'</a>
@@ -594,7 +594,7 @@
                                                 }
                                             }
                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio['image']).'" alt="">';
+                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio['image']).'" alt="">';
                                             }else{
                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                             }
@@ -602,7 +602,7 @@
                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                         <div class="ms_play_icon play_music" data-musicid="'.$audio->id.'" data-musictype="audio" data-url="'.url('/songs').'">
-                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                         </div>
                                                         <div class="slider_ctext slider_artist_text">
                                                             <a class="slider_ctitle slider_artist_ttl limited_text_line getAjaxRecord" data-type="audio" data-url="'.url('audio/single/'.$audio['id'].'/'.$audio['audio_slug']).'" href="javascript:void(0)">'.$audio['audio_title'].'</a>          
@@ -658,7 +658,7 @@
                                                 $download = '<li>'.($audio->aws_upload == 1 ? '<a href="'.getSongAWSUrlHtml($audio).'"><span class="opt_icon"><span class="icon icon_dwn"></span></span>'.__("frontWords.download_now").'</a>' : '<a href="javascript:;" class="download_track" data-musicid="'.$audio->id.'"><span class="opt_icon"><span class="icon icon_dwn"></span></span>'.__("frontWords.download_now").'</a>').'</li>';
                                             }
                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
+                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
                                             }else{
                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                             }
@@ -666,7 +666,7 @@
                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                         <div class="ms_play_icon play_music" data-musicid="'.$audio->id.'" data-musictype="audio" data-url="'.url('/songs').'">
-                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                         </div>
                                                         <div class="slider_ctext slider_artist_text">
                                                             <a class="slider_ctitle slider_artist_ttl limited_text_line getAjaxRecord" data-type="audio" data-url="'.url('audio/single/'.$audio->id.'/'.$audio->audio_slug).'" href="javascript:void(0)">'.$audio->audio_title.'</a>

@@ -11,27 +11,27 @@
         <title> @yield('title') || {{ $title }} </title>
         
         @if(isset($settings['favicon']))
-            <link rel="shortcut icon" href="{{ asset('public/images/sites/'.$settings['favicon']) }}">
+            <link rel="shortcut icon" href="{{ asset('images/sites/'.$settings['favicon']) }}">
         @endif
         
-        <link href="{{ asset('public/assets/css/admin/fonts.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('public/assets/css/admin/bootstrap.min.css') }}" rel="stylesheet" type="text/css">        
+        <link href="{{ asset('assets/css/admin/fonts.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/admin/bootstrap.min.css') }}" rel="stylesheet" type="text/css">        
         @yield('style')
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-        <link href="{{ asset('public/assets/css/admin/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('public/assets/css/admin/icofont.min.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('public/assets/css/admin/nice-select.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/admin/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/admin/icofont.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/admin/nice-select.css') }}" rel="stylesheet" type="text/css">
         
-        <link href="{{ asset('public/assets/css/admin/style.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/admin/style.css') }}" rel="stylesheet" type="text/css">
       
-        <link href="{{ asset('public/assets/plugins/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/plugins/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css">
         
         @php 
             $dashColor = '';
             $dashColor = session::get('dashColor');           
         @endphp
         @if(!empty($dashColor))
-            <link rel="stylesheet" id="theme-change" type="text/css" href="{{ asset('public/assets/css/admin/css_picker/'.$dashColor.'.css') }}">
+            <link rel="stylesheet" id="theme-change" type="text/css" href="{{ asset('assets/css/admin/css_picker/'.$dashColor.'.css') }}">
         @endif    
 
         <link rel="stylesheet" id="theme-change" type="text/css" href="#">
@@ -170,7 +170,7 @@
             var jsDynamicText = '<?php echo json_encode(['create' => __('adminWords.create'),'add' => __('adminWords.add'), 'update' => __('adminWords.update'), 'fileType' => __('adminWords.file_type'), 'chooseImage' => __('adminWords.choose_image'), 'imgExtErr' => __('adminWords.img_ext'), 'dimensionErr' => __('adminWords.dimension_err'), 'selectImgErr' => __('adminWords.select_image'), 'pleaseChoose' => __('adminWords.choose'), 'blogCat' => __('adminWords.blog_cat'), 'audioGenre' => __('adminWords.audio_genre'), 'artistGenre' => __('adminWords.artist_genres'), 'notification' => __('adminWords.notification'), 'language' => __('adminWords.language'), 'delete_records' => __('adminWords.delete_records'), 'cantUndone' => __('adminWords.cantUndone'), 'delete' => __('adminWords.delete'), 'currency' => __('adminWords.currency'), 'ok' => __('adminWords.ok'), 'update_rate_text' => __('adminWords.update_rate_text'), 'are_u_sure' => __('adminWords.are_u_sure'), 'make_default' => __('adminWords.make_default'), 'default_curr' => __('adminWords.default_curr'),'playlistGenre'=>__('frontWords.playlist').' '.__('adminWords.genre'),'city'=>__('adminWords.city'),'country' => __('adminWords.country'), 'state' => __('adminWords.state'),'select' => __('adminWords.select') ]) ?>';
         </script>         
         
-        <script src="{{ asset('public/assets/js/admin/jquery.min.js') }}"></script>  
+        <script src="{{ asset('assets/js/admin/jquery.min.js') }}"></script>  
         @if(Nav::isRoute('artist.request_payment'))
             <script>
                 $('.msoAdminFooter').addClass('msoArtistPayRequestFooter');
@@ -178,14 +178,14 @@
         @endif 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-        <script src="{{ asset('public/assets/js/admin/popper.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/admin/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/admin/swiper.min.js') }}"></script>        
-        <script src="{{ asset('public/assets/js/admin/nice-select.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/admin/custom.js') }}"></script>
-        <script src="{{ asset('public/assets/plugins/toastr/toastr.min.js') }}"></script> 
-        <script src="{{ asset('public/assets/js/valid.js') }}"></script> 
-        <script src="{{ asset('public/assets/js/submit.js') }}"></script> 
+        <script src="{{ asset('assets/js/admin/popper.min.js') }}"></script>
+        <script src="{{ asset('assets/js/admin/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/admin/swiper.min.js') }}"></script>        
+        <script src="{{ asset('assets/js/admin/nice-select.min.js') }}"></script>
+        <script src="{{ asset('assets/js/admin/custom.js') }}"></script>
+        <script src="{{ asset('assets/plugins/toastr/toastr.min.js') }}"></script> 
+        <script src="{{ asset('assets/js/valid.js') }}"></script> 
+        <script src="{{ asset('assets/js/submit.js') }}"></script> 
         
         @yield('script')     
         

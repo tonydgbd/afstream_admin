@@ -2,9 +2,9 @@
 @extends('layouts.artist.main')
 @section('title', __('adminWords.audio'))
 @section('style')
-<link href="{{ asset('public/assets/plugins/datepicker/datepicker.min.css') }}" rel="stylesheet" type="text/css">
-<link href="{{asset('public/assets/plugins/summernote/summernote-bs4.css')}}" rel="stylesheet" type="text/css">
-<link href="{{ asset('public/assets/plugins/select2/select2.min.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('assets/plugins/datepicker/datepicker.min.css') }}" rel="stylesheet" type="text/css">
+<link href="{{asset('assets/plugins/summernote/summernote-bs4.css')}}" rel="stylesheet" type="text/css">
+<link href="{{ asset('assets/plugins/select2/select2.min.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('content')  
@@ -124,7 +124,7 @@
                                     <div class="col-md-6">
                                         <div class="image-block site_image_dv">
                                             @if(isset($audioData->image) && $audioData->image != null) 
-                                                <img src="{{asset('public/images/audio/thumb/'.$audioData->image)}}" class="img-responsive" alt="" height="200px" width="200px">
+                                                <img src="{{asset('images/audio/thumb/'.$audioData->image)}}" class="img-responsive" alt="" height="200px" width="200px">
                                             @endif
                                         </div>
                                     </div>
@@ -387,11 +387,11 @@
 </div>
 @endsection 
 @section('script')
-<script src="{{ asset('public/assets/plugins/datepicker/datepicker.min.js') }}"></script> 
-<script src="{{asset('public/assets/plugins/summernote/summernote-bs4.min.js')}}"></script>
-<script src="{{ asset('public/assets/plugins/datepicker/i18n/datepicker.en.js') }}"></script> 
-<script src="{{ asset('public/assets/plugins/select2/select2.min.js') }}"></script> 
-<script src="{{ asset('public/assets/js/artist-custom.js') }}"></script>  
+<script src="{{ asset('assets/plugins/datepicker/datepicker.min.js') }}"></script> 
+<script src="{{asset('assets/plugins/summernote/summernote-bs4.min.js')}}"></script>
+<script src="{{ asset('assets/plugins/datepicker/i18n/datepicker.en.js') }}"></script> 
+<script src="{{ asset('assets/plugins/select2/select2.min.js') }}"></script> 
+<script src="{{ asset('assets/js/artist-custom.js') }}"></script>  
 <script type="text/javascript">
     if ($('.date-calender').length > 0) {
         $('.date-calender').datepicker({

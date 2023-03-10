@@ -340,7 +340,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <span class="img-thumb">
-                                                                            <img src="{{ asset('public/images/audio/thumb/'.$track->image) }}" alt="">
+                                                                            <img src="{{ asset('images/audio/thumb/'.$track->image) }}" alt="">
                                                                         </span>
                                                                     </td>
                                                                     <td>
@@ -383,7 +383,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <span class="img-thumb">
-                                                                            <img src="{{ asset('public/images/album/'.$album->image) }}" />
+                                                                            <img src="{{ asset('images/album/'.$album->image) }}" />
                                                                         </span>
                                                                     </td>
                                                                     <td>
@@ -435,9 +435,9 @@
                                                         <td>
                                                             <span class="img-thumb">
                                                                 @if(!empty($users->image))
-                                                                    <img src="{{ asset('public/images/user/'.$users->image) }}" />
+                                                                    <img src="{{ asset('images/user/'.$users->image) }}" />
                                                                 @else
-                                                                    <img src="{{ asset('public/images/user/user1-1651222429.webp') }}" />
+                                                                    <img src="{{ asset('images/user/user1-1651222429.webp') }}" />
                                                                 @endif 
                                                             </span>
                                                         </td>
@@ -475,6 +475,6 @@
 @endsection 
 
 @section('script')
-    <script src="{{ asset('public/assets/js/admin/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/admin/control-chart-apexcharts.js') }}"></script>
+    <script src="{{ asset('assets/js/admin/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/js/admin/control-chart-apexcharts.js') }}"></script>
 @endsection

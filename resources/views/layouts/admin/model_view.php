@@ -35,7 +35,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paypal" checked>
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paypal.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paypal.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif                   
@@ -44,7 +44,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="payumoney">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Payu.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Payu.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -54,7 +54,7 @@
                                             <label class="ms_radio_btn custom_tooltip" >
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paytm">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paytm.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paytm.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -64,7 +64,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="instamojo">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Instamojo.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Instamojo.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -74,7 +74,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="razorpay">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Razorpay.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Razorpay.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -84,7 +84,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="braintree">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Braintree.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Braintree.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -94,7 +94,7 @@
                                             <label class="ms_radio_btn custom_tooltip" >
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paystack">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paystack.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paystack.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -105,7 +105,7 @@
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="stripe">
                                                 <span></span>
                                                 <input type="hidden" id="disAmt">
-                                                <img src="{{ asset('public/assets/images/Payment/Stripe.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Stripe.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -116,7 +116,7 @@
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="manual_pay">
                                                 <span></span>
                                                 <input type="hidden" id="disAmt">
-                                                <img src="{{ asset('public/assets/images/Payment/Manual_pay.png') }} " alt="manualpay">
+                                                <img src="{{ asset('assets/images/Payment/Manual_pay.png') }} " alt="manualpay">
                                             </label>
                                         </li>
                                     @endif

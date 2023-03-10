@@ -18,7 +18,7 @@
                                     foreach($featured_artist as $artists){
 
                                         if($artists->image != '' && file_exists(public_path('images/artist/'.$artists->image))){
-                                            $img = '<img src="'.asset('public/images/artist/'.$artists->image).'" alt="" class="img-fluid">';
+                                            $img = '<img src="'.asset('images/artist/'.$artists->image).'" alt="" class="img-fluid">';
                                         }else{
                                             $img = '<img src="'.dummyImage('artist').'" alt="" class="img-fluid">';
                                         }                                    
@@ -27,7 +27,7 @@
                                                     <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'
                                                     
                                                      <div class="ms_play_icon play_music" data-musicid="'.$artists->id.'" data-musictype="artist" data-url="'.url('/songs').'">
-                                                        <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                        <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                     </div>
                                                     
                                                     </div>
@@ -71,12 +71,12 @@
                                                 <div class="slider_cbox slider_artist_box text-center play_box_container  mb-20">
                                                     <div class="slider_cimgbox slider_artist_imgbox play_box_img">
                                                         @if($artist->image != '' && file_exists(public_path('images/artist/'.$artist->image)))
-                                                            <img src="{{ asset('public/images/artist/'.$artist->image) }}" alt="" class="img-fluid">
+                                                            <img src="{{ asset('images/artist/'.$artist->image) }}" alt="" class="img-fluid">
                                                         @else
                                                             <img src="{{ dummyImage('artist') }}" alt="" class="img-fluid">
                                                         @endif   
                                                         <div class="ms_play_icon play_music" data-musicid="{{ $artist->id }}" data-musictype="artist" data-url="{{ url('/songs') }}">
-                                                            <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                            <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                         </div>
                                                     </div>
                                                     <div class="slider_ctext slider_artist_text">

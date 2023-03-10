@@ -46,7 +46,7 @@
                             <span class="que_text ms_btn" id="myPlaylistQueue"><i class="fa fa-angle-up" aria-hidden="true"></i> {{ __('frontWords.queue') }}</span>
                             <div id="playlist-wrap" class="jp-playlist">
                                 <div class="jp_queue_cls"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                                <h2><img src="{{ asset('public/images/add-to-queue.png') }}" alt="Queue">{{ __('frontWords.queue') }}</h2>
+                                <h2><img src="{{ asset('images/add-to-queue.png') }}" alt="Queue">{{ __('frontWords.queue') }}</h2>
                                     
                                 <div class="jp_queue_list_inner"> 
                                     <ul>
@@ -102,7 +102,7 @@
                                                     <div class="knob d3"><span></span></div>
                                                     <div class="handle"></div>
                                                     <div class="round">
-                                                        <img src="{{ asset('public/assets/images/svg/volume.svg') }}" alt="volume">
+                                                        <img src="{{ asset('assets/images/svg/volume.svg') }}" alt="volume">
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@
                     <button type="button" class="close" data-dismiss="modal"><i class="fa_icon form_close"></i></button>
                     <div class="modal-body">
                         <div class="ms_register_img">
-                            <img src="{{ asset('public/assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
                         </div>
                         <div class="ms_register_form">
                             <form id="registrationModal" method="post" action="{{ route('user_register') }}" data-reset="1" data-modal="1" modal-open="loginModal">
@@ -290,7 +290,7 @@
                     <form id="userLogin" method="post" action="{{ route('user.login') }}" data-modal="1" data-redirect="{{ url('/home') }}">
                     {{ @csrf_field() }}
                         <div class="ms_register_img">
-                            <img src="{{ asset('public/assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
                         </div>
                         <div class="ms_register_form">
                             <h2>{{ __('frontWords.login_heading') }}</h2>
@@ -372,7 +372,7 @@
                         @endif
                     {{ @csrf_field() }}
                         <div class="ms_register_img">
-                            <img src="{{ asset('public/assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('assets/images/musio-logo.png') }}" alt="" class="img-fluid" />
                         </div>
                         <div class="ms_register_form">
                             <h2>{{ __('adminWords.forgot_password') }}</h2>
@@ -402,7 +402,7 @@
                     </button>
                     <div class="modal-body">
                         <div class="ms_share_img">
-                            <img src="{{ asset('public/assets/images/svg/playlist.svg') }}" class="img-fluid" alt="Playlist">
+                            <img src="{{ asset('assets/images/svg/playlist.svg') }}" class="img-fluid" alt="Playlist">
                         </div>
                         <div class="ms_share_text">
                             <h1>{{ __('frontWords.create_playlist') }}</h1>
@@ -429,7 +429,7 @@
                     </button>
                     <div class="modal-body"> 
                         <div class="ms_share_img">
-                            <img src="{{ asset('public/assets/images/svg/playlist.svg') }}" class="img-fluid" alt="Playlist">
+                            <img src="{{ asset('assets/images/svg/playlist.svg') }}" class="img-fluid" alt="Playlist">
                         </div>
                         <div class="ms_share_text">
                         <h1>{{ __('frontWords.playlist') }}</h1>
@@ -468,7 +468,7 @@
                     </button>
                     <div class="modal-body">
                         <div class="ms_share_img">
-                            <img src="{{ url('public/assets/images/svg/sharing.svg') }}" class="img-fluid" alt="Share">
+                            <img src="{{ url('assets/images/svg/sharing.svg') }}" class="img-fluid" alt="Share">
                         </div>
                         <div class="foo_sharing ms_share_text">
                             <h1>{{ __('frontWords.share_with') }}</h1>
@@ -527,7 +527,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paypal" checked>
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paypal.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paypal.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif                   
@@ -536,7 +536,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="payumoney">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Payu.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Payu.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -546,7 +546,7 @@
                                             <label class="ms_radio_btn custom_tooltip" >
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paytm">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paytm.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paytm.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -556,7 +556,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="instamojo">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Instamojo.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Instamojo.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -566,7 +566,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="razorpay">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Razorpay.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Razorpay.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -576,7 +576,7 @@
                                             <label class="ms_radio_btn custom_tooltip">
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="braintree">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Braintree.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Braintree.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -586,7 +586,7 @@
                                             <label class="ms_radio_btn custom_tooltip" >
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="paystack">
                                                 <span></span>
-                                                <img src="{{ asset('public/assets/images/Payment/Paystack.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Paystack.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -597,7 +597,7 @@
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="stripe">
                                                 <span></span>
                                                 <input type="hidden" id="disAmt">
-                                                <img src="{{ asset('public/assets/images/Payment/Stripe.png') }} " alt="">
+                                                <img src="{{ asset('assets/images/Payment/Stripe.png') }} " alt="">
                                             </label>
                                         </li>
                                     @endif
@@ -608,7 +608,7 @@
                                                 <input type="radio" name="cardoption" class="paymentMethod" data-name="manual_pay">
                                                 <span></span>
                                                 <input type="hidden" id="disAmt">
-                                                <img src="{{ asset('public/assets/images/Payment/Manual_pay.png') }} " alt="manualpay">
+                                                <img src="{{ asset('assets/images/Payment/Manual_pay.png') }} " alt="manualpay">
                                             </label>
                                         </li>
                                     @endif
@@ -834,7 +834,7 @@
                     <form id="userPlanPayment" method="post" action="{{ route('user.login') }}" data-modal="1" data-redirect="{{ url('/home') }}">
                     {{ @csrf_field() }}
                         <div class="ms_register_img">
-                            <img src="{{ asset('public/assets/images/register_img.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('assets/images/register_img.png') }}" alt="" class="img-fluid" />
                         </div>
                         <div class="ms_register_form">
                             <h2>{{ __('frontWords.payment_gateway') }}</h2>

@@ -41,8 +41,8 @@
                             <li class="play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}">
                                 <span class="play_no">{{ $cnt }}</span>
                                 <span class="play_hover">
-                                    <img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
-                                    <img src="{{ asset('public/images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
+                                    <img src="{{ asset('images/svg/play_songlist.svg') }}" alt="Play" class="img-fluid list_play">
+                                    <img src="{{ asset('images/svg/sound_bars.svg') }}" alt="bar" class="img-fluid list_play_bar">  
                                 </span>
                             </li>
                             <!--<li><span class="play_no">{{ $cnt }}</span><span class="play_hover play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"></span></li>-->
@@ -148,7 +148,7 @@
                             <li class="text-center">
                                 <a href="javascript:void(0);" class="remove_user_playlist_music" musicid="{{ $audio->id }}" data-list-id="{{ ((!empty($getPlaylist) ? $getPlaylist[0]->id : '')) }}">
                                     <span class="ms_close">
-                                        <img src="{{ asset('public/assets/images/svg/close.svg') }}" alt="Close">
+                                        <img src="{{ asset('assets/images/svg/close.svg') }}" alt="Close">
                                     </span>
                                 </a>
                             </li>
@@ -199,7 +199,7 @@
                                         $ytImage = $ytVideo->snippet->thumbnails->high->url;
                                     }elseif(isset($ytVideo->snippet->thumbnails->default->url) && !empty($ytVideo->snippet->thumbnails->default->url)){
                                         $ytImage = $ytVideo->snippet->thumbnails->default->url;
-                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                     if(isset($ytVideo->id) && !empty($ytVideo->id)){
                                         $videoId = $ytVideo->id;
@@ -266,7 +266,7 @@
                                                 <div class="ms_main_overlay">
                                                     <div class="ms_box_overlay"></div>   
                                                     <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytVideo->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                        <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                        <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                     </div>
                                                 </div>                                            
                                             </div>

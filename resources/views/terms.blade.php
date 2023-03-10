@@ -12,7 +12,7 @@
                     <div class="musio_info_section">
                         <div class="musioo_logo_wrap">
                             <a href="{{ url('/home') }}">
-                                <img src="{{ (isset($settings['large_logo']) && $settings['large_logo'] != '' ? asset('public/images/sites/'.$settings['large_logo']) : '' ) }}" alt="" class="img-fluid"/>
+                                <img src="{{ (isset($settings['large_logo']) && $settings['large_logo'] != '' ? asset('images/sites/'.$settings['large_logo']) : '' ) }}" alt="" class="img-fluid"/>
                             </a>
                             <h4>
                                  <a href="{{ url('/home') }}">{{ __('frontWords.home') }}</a> / <span> {{ __('frontWords.terms_of_services') }}</span>

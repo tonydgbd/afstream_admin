@@ -28,7 +28,7 @@
                                                         <div class="music_center_mainbox text-center">
                                                             <div class="music_center_img">
                                                                 @if($album->image != '' && file_exists(public_path('images/album/'.$album->image)))
-                                                                    <img src="{{ asset('public/images/album/'.$album->image) }}" alt="" class="img-fluid">
+                                                                    <img src="{{ asset('images/album/'.$album->image) }}" alt="" class="img-fluid">
                                                                 @else
                                                                     <img src="{{ dummyImage('album') }}" alt="" class="img-fluid">
                                                                 @endif
@@ -114,12 +114,12 @@
                                                                     <div class="ms_songslist_left">
                                                                         <div class="songslist_number">
                                                                             <h4 class="songslist_sn">{{ $i++ }}</h4>
-                                                                            <span class="songslist_play play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><img src="{{ asset('public/images/svg/play_songlist.svg') }}" alt="" class="img-fluid"/></span>
+                                                                            <span class="songslist_play play_music" data-musicid="{{ $audio->id }}" data-musictype="audio" data-url="{{ url('/songs') }}"><img src="{{ asset('images/svg/play_songlist.svg') }}" alt="" class="img-fluid"/></span>
                                                                         </div> 
                                                                         <div class="songslist_details">
                                                                             <div class="songslist_thumb">
                                                                                 @if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image)))
-                                                                                    <img src="{{ asset('public/images/audio/thumb/'.$audio->image) }}" alt="">
+                                                                                    <img src="{{ asset('images/audio/thumb/'.$audio->image) }}" alt="">
                                                                                 @else
                                                                                     <img src="{{ dummyImage('audio') }}" alt="" class="img-fluid">
                                                                                 @endif                                                               
@@ -274,7 +274,7 @@
                                                         $ytImage = $ytVideo->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytVideo->snippet->thumbnails->default->url) && !empty($ytVideo->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytVideo->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytVideo->id) && !empty($ytVideo->id)){
                                                         $videoId = $ytVideo->id;
@@ -297,7 +297,7 @@
                                                             </div>                                                            
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytVideo->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/assets/images/svg/play.svg') }}" alt="">
+                                                                <img src="{{ asset('assets/images/svg/play.svg') }}" alt="">
                                                             </div>
 
                                                             <div class="slider_ctext slider_artist_text">
@@ -356,7 +356,7 @@
                                                         $ytImage = $ytplaylist->snippet->thumbnails->high->url;
                                                     }elseif(isset($ytplaylist->snippet->thumbnails->default->url) && !empty($ytplaylist->snippet->thumbnails->default->url)){
                                                         $ytImage = $ytplaylist->snippet->thumbnails->default->url;
-                                                    }else{ $ytImage = 'public/images/yt_music.webp'; }
+                                                    }else{ $ytImage = 'images/yt_music.webp'; }
 
                                                     if(isset($ytplaylist->snippet->resourceId->videoId) && !empty($ytplaylist->snippet->resourceId->videoId)){
                                                         $videoId = $ytplaylist->snippet->resourceId->videoId;
@@ -374,7 +374,7 @@
                                                             </div>
 
                                                             <div class="ms_play_icon play_btn yt_music" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">
-                                                                <img src="{{ asset('public/images/svg/play.svg') }}" alt="play icone">
+                                                                <img src="{{ asset('images/svg/play.svg') }}" alt="play icone">
                                                             </div>
                                                             <div class="slider_ctext slider_artist_text">
                                                                 <a href="javascript:void(0)" class="yt_music limited_text_line" data-musicid="{{ $videoId }}" data-title="{{ $ytplaylist->snippet->title }}" data-musictype="ytBrowseSearch" data-image="{{ $ytImage }}">{{ $ytplaylist->snippet->title }}</a>           
@@ -485,7 +485,7 @@
                                                             }
 
                                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
+                                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
                                                             }else{
                                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                                             }
@@ -493,7 +493,7 @@
                                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                                         <div class="ms_play_icon">
-                                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                                         </div>
                                                                         <div class="slider_ctext slider_artist_text">
                                                                         <a class="slider_ctitle slider_artist_ttl limited_text_line" href="'.url('audio/single/'.$audio->id.'/'.$audio->audio_slug).'">'.$audio->audio_title.'</a>
@@ -600,7 +600,7 @@
                                                 }
                                             }
                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio['image']).'" alt="">';
+                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio['image']).'" alt="">';
                                             }else{
                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                             }
@@ -608,7 +608,7 @@
                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                         <div class="ms_play_icon">
-                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                         </div>
                                                         <div class="slider_ctext slider_artist_text">
                                                             <a lass="slider_ctitle slider_artist_ttl limited_text_line" href="'.url('audio/single/'.$audio['id'].'/'.$audio['audio_slug']).'">'.$audio['audio_title'].'</a>
@@ -664,7 +664,7 @@
                                                 $download = '<li>'.($audio->aws_upload == 1 ? '<a href="'.getSongAWSUrlHtml($audio).'"><span class="opt_icon"><span class="icon icon_dwn"></span></span>'.__("frontWords.download_now").'</a>' : '<a href="javascript:;" class="download_track" data-musicid="'.$audio->id.'"><span class="opt_icon"><span class="icon icon_dwn"></span></span>'.__("frontWords.download_now").'</a>').'</li>';
                                             }
                                             if($audio->image != '' && file_exists(public_path('images/audio/thumb/'.$audio->image))){
-                                                $img = '<img src="'.asset('public/images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
+                                                $img = '<img src="'.asset('images/audio/thumb/'.$audio->image).'" alt="" class="img-fluid">';
                                             }else{
                                                 $img = '<img src="'.dummyImage('audio').'" alt="" class="img-fluid">';
                                             }
@@ -672,7 +672,7 @@
                                                     <div class="slider_cbox slider_artist_box text-center play_box_container">
                                                         <div class="slider_cimgbox slider_artist_imgbox play_box_img">'.$img.'</div>
                                                         <div class="ms_play_icon">
-                                                            <img src="'. asset('public/images/svg/play.svg').'" alt="play icone">
+                                                            <img src="'. asset('images/svg/play.svg').'" alt="play icone">
                                                         </div>
                                                         <div class="slider_ctext slider_artist_text">
                                                             <a class="slider_ctitle slider_artist_ttl limited_text_line" href="'.url('audio/single/'.$audio->id.'/'.$audio->audio_slug).'">'.$audio->audio_title.'</a>
