@@ -1,20 +1,19 @@
 {
     "version": 2,
     "functions": {
-        "routes/web.php": {
-          "runtime": "vercel-php@0.3.3"
+        "api/index.php": { "runtime": "vercel-php@0.3.3" }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
         }
-      }
-      ,
-      "routes": [
-        { "src": "/(.*)",  "dest": "/api/index.php" }
-      ]
-      ,
+    ],
     "env": {
         "APP_NAME": "Laravel Vercel",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://afstream.vercel.app",
+        "APP_URL": "https://laravel-vercel.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
